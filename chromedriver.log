@@ -1,0 +1,45 @@
+[0.002][INFO]:      ChromeDriver 26.0.1383.0 C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe
+[0.191][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.detach": true,
+   "chromeOptions": {
+      "detach": true
+   },
+   "cssSelectorsEnabled": true,
+   "javascriptEnabled": true,
+   "nativeEvents": false,
+   "platform": "ANY",
+   "rotatable": false,
+   "takesScreenshot": false,
+   "version": ""
+}
+
+[0.192][INFO]:      Using named testing interface
+[5.279][INFO]:      Connected to Chrome successfully. Version: 26.0.1410.43
+[5.287][FINE]:      Command received (/session/32a46d3bb46863c595eadd3502e69ad9)
+[5.287][FINE]:      Command finished (/session/32a46d3bb46863c595eadd3502e69ad9) with response {
+   "sessionId": "32a46d3bb46863c595eadd3502e69ad9",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "26.0.1383.0",
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "windows",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "26.0.1410.43",
+      "webStorageEnabled": true
+   }
+}
+
+[6.474][FINE]:      Command received (/session/32a46d3bb46863c595eadd3502e69ad9)
+[16.712][WARNING]:  Chrome still running, terminating...
+[16.712][INFO]:     Chrome shutdown
