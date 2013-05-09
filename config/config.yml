@@ -1,4 +1,4 @@
 ---
 browser: chrome
-host: http://consultation.capvision.com/
-tags: capvision
+host: http://beta.capvision.com.cn/index.php/
+tags: home,consultation

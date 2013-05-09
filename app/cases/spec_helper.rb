@@ -39,11 +39,11 @@ RSpec.configure do |c|
 		Psych.load ERB.new(content).result(binding)
 	end
 	
-	c.before(:suite) do
+	c.before(:each) do
 		$navi = ClientportalNavigator.new $config
 	end
 
-	c.after(:suite) do
+	c.after(:each) do
 		$navi.close
 	end
 end
