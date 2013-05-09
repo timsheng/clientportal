@@ -1,6 +1,6 @@
 require File.expand_path 'app/cases/spec_helper'
 
-describe 'home page', :home do 
+describe 'home page', :home=>false do 
 	describe 'initialize page' do 
 		context 'page loading' do 
 			it 'should visit home page' do 
