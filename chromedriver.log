@@ -1,5 +1,5 @@
-[0.002][INFO]:      ChromeDriver 26.0.1383.0 C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe
-[0.191][FINE]:      Initializing session with capabilities {
+[0.000][INFO]:      ChromeDriver 26.0.1383.0 C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe
+[0.514][FINE]:      Initializing session with capabilities {
    "browserName": "chrome",
    "chrome.detach": true,
    "chromeOptions": {
@@ -14,11 +14,11 @@
    "version": ""
 }
 
-[0.192][INFO]:      Using named testing interface
-[5.279][INFO]:      Connected to Chrome successfully. Version: 26.0.1410.43
-[5.287][FINE]:      Command received (/session/32a46d3bb46863c595eadd3502e69ad9)
-[5.287][FINE]:      Command finished (/session/32a46d3bb46863c595eadd3502e69ad9) with response {
-   "sessionId": "32a46d3bb46863c595eadd3502e69ad9",
+[0.515][INFO]:      Using named testing interface
+[4.740][INFO]:      Connected to Chrome successfully. Version: 26.0.1410.43
+[4.753][FINE]:      Command received (/session/b292ac5e9f1c402d031ffe98eb892b77)
+[4.753][FINE]:      Command finished (/session/b292ac5e9f1c402d031ffe98eb892b77) with response {
+   "sessionId": "b292ac5e9f1c402d031ffe98eb892b77",
    "status": 0,
    "value": {
       "acceptSslCerts": false,
@@ -40,6 +40,77 @@
    }
 }
 
-[6.474][FINE]:      Command received (/session/32a46d3bb46863c595eadd3502e69ad9)
-[16.712][WARNING]:  Chrome still running, terminating...
-[16.712][INFO]:     Chrome shutdown
+[5.514][FINE]:      Command received (/session/b292ac5e9f1c402d031ffe98eb892b77/url) with params {
+   "url": "http://beta.capvision.com.cn/index.php/"
+}
+
+[5.514][FINER]:     Waiting for all views to stop loading...
+[5.514][FINER]:     Done waiting for all views to stop loading
+[8.907][FINER]:     Waiting for all views to stop loading...
+[8.909][FINER]:     Done waiting for all views to stop loading
+[8.909][FINE]:      Command finished (/session/b292ac5e9f1c402d031ffe98eb892b77/url) with response {
+   "sessionId": "b292ac5e9f1c402d031ffe98eb892b77",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[8.913][FINE]:      Command received (/session/b292ac5e9f1c402d031ffe98eb892b77/url)
+[8.913][FINER]:     Waiting for all views to stop loading...
+[8.913][FINER]:     Done waiting for all views to stop loading
+[8.927][FINER]:     Waiting for all views to stop loading...
+[8.927][FINER]:     Done waiting for all views to stop loading
+[8.927][FINE]:      Command finished (/session/b292ac5e9f1c402d031ffe98eb892b77/url) with response {
+   "sessionId": "b292ac5e9f1c402d031ffe98eb892b77",
+   "status": 0,
+   "value": "http://beta.capvision.com.cn/index.php/"
+}
+
+[8.943][FINE]:      Command received (/session/b292ac5e9f1c402d031ffe98eb892b77/frame) with params {
+   "id": null
+}
+
+[8.943][FINER]:     Waiting for all views to stop loading...
+[8.945][FINER]:     Done waiting for all views to stop loading
+[8.945][FINER]:     Waiting for all views to stop loading...
+[8.945][FINER]:     Done waiting for all views to stop loading
+[8.945][FINE]:      Command finished (/session/b292ac5e9f1c402d031ffe98eb892b77/frame) with response {
+   "sessionId": "b292ac5e9f1c402d031ffe98eb892b77",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[8.956][FINE]:      Command received (/session/b292ac5e9f1c402d031ffe98eb892b77/element) with params {
+   "using": "xpath",
+   "value": ".//a[normalize-space(@href)='/index.php/user/login']"
+}
+
+[8.956][FINER]:     Waiting for all views to stop loading...
+[8.956][FINER]:     Done waiting for all views to stop loading
+[8.991][FINER]:     Waiting for all views to stop loading...
+[8.991][FINER]:     Done waiting for all views to stop loading
+[8.991][FINE]:      Command finished (/session/b292ac5e9f1c402d031ffe98eb892b77/element) with response {
+   "sessionId": "b292ac5e9f1c402d031ffe98eb892b77",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1368071158532"
+   }
+}
+
+[9.004][FINE]:      Command received (/session/b292ac5e9f1c402d031ffe98eb892b77/element/:wdc:1368071158532/name)
+[9.004][FINER]:     Waiting for all views to stop loading...
+[9.006][FINER]:     Done waiting for all views to stop loading
+[9.012][FINER]:     Waiting for all views to stop loading...
+[9.013][FINER]:     Done waiting for all views to stop loading
+[9.013][FINE]:      Command finished (/session/b292ac5e9f1c402d031ffe98eb892b77/element/:wdc:1368071158532/name) with response {
+   "sessionId": "b292ac5e9f1c402d031ffe98eb892b77",
+   "status": 0,
+   "value": "a"
+}
+
+[9.109][FINE]:      Command received (/session/b292ac5e9f1c402d031ffe98eb892b77)
+[19.184][WARNING]:  Chrome still running, terminating...
+[19.184][INFO]:     Chrome shutdown
