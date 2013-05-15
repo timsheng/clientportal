@@ -15,5 +15,24 @@ class ConsultationPage < ClientportalPage
 
 	link :completed_status, :id => 'completed-status'
 
+	span :recommended_count, :class => 'project-tasks-count'
+
+    table :task_list, :id => 'tasks-list-items'
+
+	cell :project_num, :xpath => '//tr[@class="tasks-list-item"]//td[2]'
+	# table :task_num, :xpath => '//table[@id="tasks-list-items"]//tbody//tr[2]'
+
 	div :blank_task_detail, :id => 'blank-task-detail'
+
+	link :request_consultation, :id => 'select-button'
+
+	div :select_confirmation, :id => 'select-confirmation'
+
+	textarea :confirm_notes, :id => 'select-confirm-notes'
+
+	link :new_request, :css => 'div#client-project-sendrequest a'
+
+	div :background, :class => 'modal-backdrop'
+
+	link :closeX, :css => 'div.modal-header a'
 end

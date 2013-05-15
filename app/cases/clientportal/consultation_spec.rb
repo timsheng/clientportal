@@ -2,7 +2,7 @@
 require File.expand_path 'app/cases/spec_helper'
 require File.expand_path 'app/cases/shared/action'
 
-describe 'consultation page', :consultation=>false do 
+describe 'consultation page', :consultation do 
 	let(:consultation_page)do 
 		    home_page = $navi.goto_home_page
 			login_page = home_page.direct_to_login_page
@@ -11,15 +11,10 @@ describe 'consultation page', :consultation=>false do
     end
 	
 	describe 'initialize page' do
-    # let(:consultation_page){$navi.goto_home_page.direct_to_login_page.login("gzu@capvision.com","1234").direct_to_consultation_page}
     
 		context 'page loading' do
 
 			it 'should visit consultation page' do 
-				# home_page = $navi.goto_home_page
-				# login_page = home_page.direct_to_login_page
-				# home_page = login_page.login "gzu@capvision.com","1234"
-				# consultation_page = home_page.direct_to_consultation_page
 				consultation_page.my_profile?.should be_true
 			end
 
@@ -76,12 +71,62 @@ describe 'consultation page', :consultation=>false do
 				consultation_page.blank_task_detail.should eql 'All the consultants that you have scheduled. Select the consultant to reschedule or cancel the call. Select the consultant and click "called" to confirm the call and give your valuable feedback.'
 			end
 
-			it 'should be right by completed', :test do 
+			it 'should be right by completed' do 
 				consultation_page.completed_status
 				sleep 2
 				consultation_page.blank_task_detail.should eql 'All the consultations you have completed.'
 			end
 		end
+
+		context 'verify center project ' do 
+
+			it 'should display center project when the number of left items >0' do 
+				if consultation_page.recommended_count.to_i > 0
+					consultation_page.project_num?.should be_true
+				else
+					consultation_page.project_num?.should_not be_true
+				end
+			end
+		end
+
+		
+			
+
+		context 'verify recommended consultation' do 
+
+			before(:each) do 
+				consultation_page.task_list_element.[](1).click 
+				sleep 2
+				consultation_page.request_consultation
+				sleep 2
+			end
+
+			it 'should pop-up request consultation window' do
+				
+				consultation_page.background_element.should exist
+			end
+
+			it 'should close pop-up window when click x button' do
+				consultation_page.closeX_element.double_click
+				consultation_page.select_confirmation_element.attribute(:style).should eql 'display: block;'
+			end
+
+
+		end
+		
+	end
+
+	describe 'new project module' do 
+
+		context 'verify request new projevt' do 
+
+			it 'should display a pop-up window when click "New Request" ' do 
+				consultation_page.new_request
+				consultation_page.background_element.should exist
+			end
+
+		end
+		
 	end
 end
 
