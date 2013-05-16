@@ -28,11 +28,23 @@ class ConsultationPage < ClientportalPage
 
 	div :select_confirmation, :id => 'select-confirmation'
 
-	textarea :confirm_notes, :id => 'select-confirm-notes'
-
 	link :new_request, :css => 'div#client-project-sendrequest a'
 
 	div :background, :class => 'modal-backdrop'
 
+	textarea :confirm_notes, :id => 'select-confirm-notes'
+
+	link :confirm_button, :id => 'select-confirm-button'
+
 	link :closeX, :css => 'div.modal-header a'
+
+	link :close, :class => 'btn'
+
+	textarea :comment_message, :id => 'ProjectTaskComment_message' 
+
+	button :submit_comment, :id => 'submit-comment'
+    
+    def comment_content
+    	@browser.elements(:class,'comment-content')
+    end
 end
