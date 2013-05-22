@@ -1,0 +1,19 @@
+---
+active:
+  email: contact_active@163.com
+  password: abcd1234
+
+inactive:
+  email: contact_inactive@163.com
+  password: abcd1234
+  warning: 'This account has been blocked. Any questions, please feel free to contact us request@capvision.com'
+
+transferred:
+  email: contact_transferred@163.com
+  password: abcd1234
+  warning: 'This account has been blocked. Any questions, please feel free to contact us request@capvision.com'
+
+unregisterred:
+  email: contact_unregisterred@163.com
+  password: abcd1234
+  warning: 'email invalid'

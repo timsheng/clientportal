@@ -113,7 +113,7 @@ describe 'consultation page', :consultation=>false do
 		end
 
 		context 'verify recommended type submit commit' do 
-			it 'should submit commit', :test do 
+			it 'should submit commit' do 
 				consultation_page.task_list_element.[](1).click 
 				sleep 2
 				message = consultation_page.comment_message = 'tim test'+Time.new.to_s
@@ -122,6 +122,29 @@ describe 'consultation page', :consultation=>false do
 				comment = consultation_page.comment_content
 				comment.[](comment.length-1).text.should eql "#{message}"
 			end
+		end
+
+		context 'verify operations on Requested tasks' do
+
+			it 'should close cancel confirm popup clicking X'
+
+			it 'should close cancel confirm popup clicking Close'
+
+			it 'should close cancel confirm popup & cancel the task clicking Confirm'
+
+			it 'should submit comments', :test do
+				consultation_page.requested_status
+				sleep 2
+				consultation_page.tasks_list_element[1][1].click
+				sleep 2 
+				message = consultation_page.comment_message = "sample auto comment"
+				consultation_page.submit_comment
+				sleep 2
+				comment = consultation_page.comment_content
+				comment.[](comment.length-1).text should eql "#{message}"
+
+			end
+
 		end
 		
 	end
@@ -133,7 +156,5 @@ describe 'consultation page', :consultation=>false do
 				consultation_page.background_element.should exist
 			end
 		end
-		
 	end
 end
-
